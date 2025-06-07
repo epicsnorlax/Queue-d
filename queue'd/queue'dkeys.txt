@@ -1,6 +1,0 @@
-queue'd key file: Created the following files:
-
-Extension: C:\Users\yash\Downloads\queue'd.crx
-Key file: C:\Users\yash\Downloads\queue'd.pem
-
-Keep your key file in a safe place. You'll need it to create new versions of your extension.
