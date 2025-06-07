@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Chatbot Message Queue Widget",
+  "version": "1.1",
+  "description": "Queue and manage messages for ChatGPT, Claude, and DeepSeek with a draggable, persistent widget.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://chat.com/*",
+    "https://chat.deepseek.com/*",
+    "https://claude.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://chat.com/*",
+        "https://chat.deepseek.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["inject.js"],
+      "css": ["popup.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.css", "sortable.min.js"],
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://chat.com/*",
+        "https://chat.deepseek.com/*",
+        "https://claude.ai/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
